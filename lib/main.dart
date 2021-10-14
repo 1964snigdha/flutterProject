@@ -6,56 +6,51 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Elevated Button Demo';
+  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: _title,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: const MyStatefulWidget(),
-      ),
+      home: MyStatelessWidget(),
     );
   }
 }
 
-/// This is the stateful widget that the main application instantiates.
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+/// This is the stateless widget that the main application instantiates.
+class MyStatelessWidget extends StatelessWidget {
+  const MyStatelessWidget({Key? key}) : super(key: key);
 
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-/// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
-
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          ElevatedButton(
-            style: style,
-            onPressed: null,
-            child: const Text('Elevated button 1'),
-          ),
-          const SizedBox(height: 30),
-          ElevatedButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Elevated button 2'),
-          ),
-          const SizedBox(height: 30),
-          ElevatedButton(
-              onPressed: () {},
-              style: style,
-              child: const Text('Elevated button 3'))
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expanded Row Sample'),
+      ),
+      body: Center(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.amber,
+                height: 100,
+              ),
+            ),
+            Container(
+              color: Colors.blue,
+              height: 100,
+              width: 50,
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.amber,
+                height: 100,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
