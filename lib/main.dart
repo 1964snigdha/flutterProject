@@ -37,37 +37,46 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(children: <Widget>[
         Container(
           height: 100,
-          width: 300,
-          alignment: Alignment.center,
+          width: 800,
+          //alignment: Alignment.center,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), color: Colors.green),
-          child: const Text(
-            "A new 'ExampleInstance' has been created.",
-            style: TextStyle(color: Colors.white, fontSize: 25),
+          child: const Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "A new 'ExampleInstance' has been created.",
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
           ),
         ),
         const SizedBox(height: 20),
         Container(
           height: 100,
-          width: 300,
-          alignment: Alignment.center,
+          width: 800,
+          //alignment: Alignment.center,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), color: Colors.green),
-          child: const Text(
-            "A new 'ExampleInstanceByDefinition' has been created.",
-            style: TextStyle(color: Colors.white, fontSize: 25),
+          child: const Align(
+            alignment: Alignment.center,
+            child: Text(
+              "A new 'ExampleInstanceByDefinition' has been created.",
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
           ),
         ),
         const SizedBox(height: 20),
         Container(
-          alignment: Alignment.center,
+          //alignment: Alignment.center,
           height: 100,
-          width: 300,
+          width: 800,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10), color: Colors.green),
-          child: const Text(
-            "A new 'ExampleStateWithoutSingleton' has been created.",
-            style: TextStyle(color: Colors.white, fontSize: 25),
+          child: const Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "A new 'ExampleStateWithoutSingleton' has been created.",
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
           ),
         ),
         const SizedBox(height: 20),
