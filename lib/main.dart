@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
                 color: Colors.yellow,
               ),
               Positioned(
-                bottom: 0,
-                right: 0,
+                bottom: 10,
+                right: 10,
                 child: Container(
                   width: 150,
                   height: 90,
